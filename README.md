@@ -74,65 +74,49 @@ Key questions addressed:
 
 ## Data Analysis Process
 
-1.	**Data Import** — Loaded both CSV files into pandas DataFrames.
-2.	**Data Cleaning** 
-  o	Removed duplicate records from both datasets.
-  o	Standardized the Name column by stripping special characters.
-  o	Corrected inconsistent category labels (e.g. gender entries such as "Mle" and "Fmale").
-  o	Standardized department names to a consistent case and labeled missing departments as "Unknown Department" rather than leaving them blank.
-  o	Split the combined LastLogin field into separate date and time columns.
-  o	Recoded SmokingStatus into a binary numeric format (1 = Smoker, 0 = Non-Smoker) to support quantitative analysis.
-3.	**Data Integration** — Merged the employee and health datasets on EmployeeID using both inner and outer joins to preserve analytical flexibility.
-4.	**Descriptive Statistics** — Calculated central tendency and range measures, including mean age, mean stress level, median work hours, minimum sleep hours, and maximum step count.
-5.	**Grouped Analysis** — Aggregated data by department and gender to compare mean age, productivity score, employee headcount, and average stress level.
-6.	**Correlation Analysis** — Evaluated the statistical relationship between productivity, stress, and lifestyle variables (work hours, sleep, activity level, smoking status).
-7.	**Data Visualization** — Produced bar charts, a scatter plot, and a trend line to communicate departmental distribution, gender breakdown, stress patterns, and the work hours–productivity relationship.
+- **Data Import**
+  - Loaded both CSV files (`Employee_Details.csv`, `Employee_Health.csv`) into pandas DataFrames.
+
+- **Data Cleaning**
+  - Removed duplicate records from both datasets.
+  - Standardized the `Name` column by stripping special characters.
+  - Corrected inconsistent category labels (e.g. gender entries such as "Mle" and "Fmale").
+  - Standardized department names to a consistent case and labeled missing departments as "Unknown Department" rather than leaving them blank.
+  - Split the combined `LastLogin` field into separate date and time columns.
+  - Recoded `SmokingStatus` into a binary numeric format (1 = Smoker, 0 = Non-Smoker) to support quantitative analysis.
+
+- **Data Integration**
+  - Merged the employee and health datasets on `EmployeeID` using both inner and outer joins to preserve analytical flexibility.
+
+- **Descriptive Statistics**
+  - Calculated mean age and mean stress level across the workforce.
+  - Calculated median work hours, minimum sleep hours, and maximum step count.
+
+- **Grouped Analysis**
+  - Aggregated data by department to compare mean age, productivity score, and employee headcount.
+  - Aggregated data by gender to compare employee headcount and average stress level.
+
+- **Correlation Analysis**
+  - Evaluated the statistical relationship between work hours and productivity score.
+  - Evaluated the statistical relationship between sleep, activity level, and smoking status against stress and productivity.
+
+- **Data Visualization**
+  - Built a horizontal bar chart of employee distribution across departments.
+  - Built a bar chart of employee count by gender.
+  - Built a bar chart of average stress level by gender.
+  - Built a scatter plot of work hours versus productivity score, with correlation coefficient.
+  - Built a line chart of employee last login activity trend.
 
 ---
 
-### Question 1 — Data Loading
-- Mounts Google Drive and loads both CSV files (`Employee_Details.csv` and `Employee_Health.csv`) into pandas DataFrames.
+## Business Impact
 
-### Question 2 — Data Cleaning
-Applies the following transformations to both datasets:
+This analysis provides organizational stakeholders with a data-driven view of workforce composition and wellbeing that can inform HR strategy and employee wellness programs. Specifically, the findings:
 
-| Step | Transformation |
-|---|---|
-| 2a | Remove duplicate rows |
-| 2b | Strip special characters (`/`, `1–9`, `.`, `_`) from `Name` column |
-| 2c | Encode `SmokingStatus` as binary (`Smoker` → `1`, `Non-Smoker` → `0`) |
-| 2d | Split `LastLogin` into separate `LastLogin_Date` and `LastLogin_Time` columns |
-| 2e | Standardise `Department` values to uppercase |
-| 2f | Fill missing `Department` values with `"UNKNOWN DEPARTMENT"` |
-
-### Question 3 — Statistical Analysis
-Calculates the following descriptive statistics using NumPy:
-
-| Step | Metric |
-|---|---|
-| 3a | Average employee age |
-| 3b | Average stress level |
-| 3c | Median work hours |
-| 3d | Minimum sleep hours |
-| 3e | Maximum step count |
-
-### Question 4 — Dataset Merging & Aggregation
-- **4a** — Outer merge of both datasets on `EmployeeID`
-- **4b** — Inner merge of both datasets on `EmployeeID`
-- **4c** — Mean age grouped by department
-- **4d** — Mean productivity score grouped by department
-- **4e** — Employees sorted by productivity score (descending)
-
-### Question 5 — Data Visualisation
-Generates five Matplotlib charts:
-
-| Step | Chart |
-|---|---|
-| 5a | Horizontal bar chart — Employee count by department |
-| 5b | Bar chart — Employee count by gender (with gender data correction) |
-| 5c | Bar chart — Average stress level by gender |
-| 5d | Scatter plot — Productivity score vs. work hours (with correlation coefficient) |
-| 5e | Line chart — Employee last login activity trend |
+- **Support workforce planning** by quantifying headcount and demographic balance across departments.
+- **Challenge assumptions about productivity drivers** — the analysis found no meaningful correlation between common lifestyle factors (sleep, activity, smoking, work hours) and either stress or productivity, indicating that initiatives targeting these factors alone are unlikely to move productivity outcomes.
+- **Identify wellbeing risk areas**, such as employees reporting critically low sleep hours, that merit further investigation independent of their productivity impact.
+- **Establish a reusable data pipeline** for future workforce analytics, with cleaning and merging logic that can be applied to updated datasets on an ongoing basis.
 
 ---
 
