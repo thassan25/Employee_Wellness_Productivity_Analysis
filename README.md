@@ -73,19 +73,20 @@ Key questions addressed:
 ---
 
 ## Data Analysis Process
-1.	Data Import — Loaded both CSV files into pandas DataFrames.
-2.	Data Cleaning 
+
+1.	**Data Import** — Loaded both CSV files into pandas DataFrames.
+2.	**Data Cleaning** 
   o	Removed duplicate records from both datasets.
   o	Standardized the Name column by stripping special characters.
   o	Corrected inconsistent category labels (e.g. gender entries such as "Mle" and "Fmale").
   o	Standardized department names to a consistent case and labeled missing departments as "Unknown Department" rather than leaving them blank.
   o	Split the combined LastLogin field into separate date and time columns.
   o	Recoded SmokingStatus into a binary numeric format (1 = Smoker, 0 = Non-Smoker) to support quantitative analysis.
-3.	Data Integration — Merged the employee and health datasets on EmployeeID using both inner and outer joins to preserve analytical flexibility.
-4.	Descriptive Statistics — Calculated central tendency and range measures, including mean age, mean stress level, median work hours, minimum sleep hours, and maximum step count.
-5.	Grouped Analysis — Aggregated data by department and gender to compare mean age, productivity score, employee headcount, and average stress level.
-6.	Correlation Analysis — Evaluated the statistical relationship between productivity, stress, and lifestyle variables (work hours, sleep, activity level, smoking status).
-7.	Data Visualization — Produced bar charts, a scatter plot, and a trend line to communicate departmental distribution, gender breakdown, stress patterns, and the work hours–productivity relationship.
+3.	**Data Integration** — Merged the employee and health datasets on EmployeeID using both inner and outer joins to preserve analytical flexibility.
+4.	**Descriptive Statistics** — Calculated central tendency and range measures, including mean age, mean stress level, median work hours, minimum sleep hours, and maximum step count.
+5.	**Grouped Analysis** — Aggregated data by department and gender to compare mean age, productivity score, employee headcount, and average stress level.
+6.	**Correlation Analysis** — Evaluated the statistical relationship between productivity, stress, and lifestyle variables (work hours, sleep, activity level, smoking status).
+7.	**Data Visualization** — Produced bar charts, a scatter plot, and a trend line to communicate departmental distribution, gender breakdown, stress patterns, and the work hours–productivity relationship.
 
 ---
 
