@@ -1,4 +1,4 @@
-# Employee_Health_Analysis_Python
+# Employee_Wellness_Productivity_Analysis
 A Python-based data analysis project that explores employee demographics and health metrics using two structured datasets. The project covers data cleaning, statistical analysis, dataset merging, and data visualization.
 
 ---
@@ -8,11 +8,12 @@ A Python-based data analysis project that explores employee demographics and hea
 ```
 📦 repository/
 ├── 📁 input/
-│   ├── Employee_Details.csv       # Employee demographic and login data
-│   └── Employee_Health.csv        # Employee health and productivity data
-├── tarmin_python_project.py       # Python script version of the analysis
-├── tarmin_python_project.ipynb    # Jupyter/Google Colab notebook version
-└── README.md                      # Project documentation
+│   ├── Employee_Details.csv          # Employee demographic and login data
+│   └── Employee_Health.csv           # Employee health and productivity data
+├── Tarmin_python_project.py          # Python script version of the analysis
+├── Tarmin_python_project.ipynb       # Jupyter/Google Colab notebook version
+├── Employee_Wellness_Productivity_Analysis_Insights        # Insight file
+└── README.md                         # Project documentation
 ```
 
 ---
@@ -125,7 +126,7 @@ pip install pandas numpy matplotlib
 ## How to Run
 
 ### Option 1 — Google Colab (Recommended)
-1. Upload `tarmin_python_project.ipynb` to [Google Colab](https://colab.research.google.com/).
+1. Upload `Tarmin_python_project.ipynb` to [Google Colab](https://colab.research.google.com/).
 2. Place the input CSV files in your Google Drive under the path:  
    `MyDrive/Python classes/Python project/`
 3. Run all cells in order.
@@ -136,5 +137,5 @@ pip install pandas numpy matplotlib
 3. Update the file paths in the script to point to your local input folder.
 4. Run the script:
    ```bash
-   python tarmin_python_project.py
+   python Tarmin_python_project.py
    ```
