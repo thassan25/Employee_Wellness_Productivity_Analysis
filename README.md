@@ -139,3 +139,21 @@ pip install pandas numpy matplotlib
    ```bash
    python Tarmin_python_project.py
    ```
+
+---
+
+## Author
+
+**Tarmin**  
+Aspiring Data Analyst with hands-on experience in Excel, SQL, Python, PowerBI, Tableau and AI/ML. This repository showcases real-world projects built to solve practical data problems.
+
+---
+
+## Contact
+
+**LinkedIn:** [www.linkedin.com/in/tarmin-hassan-099914a1]
+**Email:** [tarminhassan@yahoo.com]
+**GitHub:** [github.com/thassan25]
+
+
+
