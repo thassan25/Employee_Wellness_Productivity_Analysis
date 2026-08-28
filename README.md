@@ -4,10 +4,11 @@ A Python-based data analysis project that explores employee demographics and hea
 ---
 
 ## Skills & Tools
-•	Programming Language: Python
-•	Libraries: pandas, NumPy, Matplotlib
-•	Environment: Google Colab / Jupyter Notebook
-•	Techniques: Data cleaning, data merging, exploratory data analysis (EDA), descriptive statistics, correlation analysis, data visualization
+
+- **Programming Language:** Python
+- **Libraries:** pandas, NumPy, Matplotlib
+- **Environment:** Google Colab / Jupyter Notebook
+- **Techniques:** Data cleaning, data merging, exploratory data analysis (EDA), descriptive statistics, correlation analysis, data visualization
 
 ---
 
@@ -64,11 +65,12 @@ Contains health and productivity metrics for each employee.
 ## Project Overview
 
 The analysis combines two source datasets — employee demographic details and employee health metrics — to examine how factors such as work hours, sleep, physical activity, and smoking status relate to employee stress and productivity. Departmental and demographic breakdowns are also produced to provide a workforce-level view.
-Key questions addressed:
-•	What is the composition of the workforce by department and gender?
-•	How do stress and productivity levels vary across departments?
-•	Do lifestyle and work-habit factors (sleep, activity, work hours, smoking) meaningfully influence stress or productivity?
-•	Where are the data quality issues, and how were they addressed?
+
+**Key questions addressed:**
+- What is the composition of the workforce by department and gender?
+- How do stress and productivity levels vary across departments?
+- Do lifestyle and work-habit factors (sleep, activity, work hours, smoking) meaningfully influence stress or productivity?
+- Where are the data quality issues, and how were they addressed?
 
 ---
 
