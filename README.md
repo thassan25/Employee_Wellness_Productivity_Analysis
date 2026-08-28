@@ -3,6 +3,14 @@ A Python-based data analysis project that explores employee demographics and hea
 
 ---
 
+## Skills & Tools
+•	Programming Language: Python
+•	Libraries: pandas, NumPy, Matplotlib
+•	Environment: Google Colab / Jupyter Notebook
+•	Techniques: Data cleaning, data merging, exploratory data analysis (EDA), descriptive statistics, correlation analysis, data visualization
+
+---
+
 ## Repository Structure
 
 ```
@@ -12,7 +20,7 @@ A Python-based data analysis project that explores employee demographics and hea
 │   └── Employee_Health.csv           # Employee health and productivity data
 ├── Tarmin_python_project.py          # Python script version of the analysis
 ├── Tarmin_python_project.ipynb       # Jupyter/Google Colab notebook version
-├── Employee_Wellness_Productivity_Analysis_Insights        # Insight file
+├── Employee_Wellness_Productivity_Analysis_Insights        # Written summary of key findings and business insights
 └── README.md                         # Project documentation
 ```
 
@@ -55,7 +63,31 @@ Contains health and productivity metrics for each employee.
 
 ## Project Overview
 
-The analysis is broken into five questions:
+The analysis combines two source datasets — employee demographic details and employee health metrics — to examine how factors such as work hours, sleep, physical activity, and smoking status relate to employee stress and productivity. Departmental and demographic breakdowns are also produced to provide a workforce-level view.
+Key questions addressed:
+•	What is the composition of the workforce by department and gender?
+•	How do stress and productivity levels vary across departments?
+•	Do lifestyle and work-habit factors (sleep, activity, work hours, smoking) meaningfully influence stress or productivity?
+•	Where are the data quality issues, and how were they addressed?
+
+---
+
+## Data Analysis Process
+1.	Data Import — Loaded both CSV files into pandas DataFrames.
+2.	Data Cleaning 
+  o	Removed duplicate records from both datasets.
+  o	Standardized the Name column by stripping special characters.
+  o	Corrected inconsistent category labels (e.g. gender entries such as "Mle" and "Fmale").
+  o	Standardized department names to a consistent case and labeled missing departments as "Unknown Department" rather than leaving them blank.
+  o	Split the combined LastLogin field into separate date and time columns.
+  o	Recoded SmokingStatus into a binary numeric format (1 = Smoker, 0 = Non-Smoker) to support quantitative analysis.
+3.	Data Integration — Merged the employee and health datasets on EmployeeID using both inner and outer joins to preserve analytical flexibility.
+4.	Descriptive Statistics — Calculated central tendency and range measures, including mean age, mean stress level, median work hours, minimum sleep hours, and maximum step count.
+5.	Grouped Analysis — Aggregated data by department and gender to compare mean age, productivity score, employee headcount, and average stress level.
+6.	Correlation Analysis — Evaluated the statistical relationship between productivity, stress, and lifestyle variables (work hours, sleep, activity level, smoking status).
+7.	Data Visualization — Produced bar charts, a scatter plot, and a trend line to communicate departmental distribution, gender breakdown, stress patterns, and the work hours–productivity relationship.
+
+---
 
 ### Question 1 — Data Loading
 - Mounts Google Drive and loads both CSV files (`Employee_Details.csv` and `Employee_Health.csv`) into pandas DataFrames.
